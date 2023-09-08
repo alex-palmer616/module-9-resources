@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM XSS Demo</title>
+  <script>
+    function displayMessage() {
+      var userInput = document.getElementById("userInput").value;
+      var outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = userInput;
+    }
+  </script>
+</head>
+<body>
+  <h1>DOM XSS Demo</h1>
+  <input type="text" id="userInput" placeholder="Enter your message">
+  <button onclick="displayMessage()">Display</button>
+  <div id="output"></div>
+</body>
